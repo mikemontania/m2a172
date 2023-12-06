@@ -1,0 +1,25 @@
+.sidebar-search > div {
+  padding: 10px 20px;
+}
+ .sidebar-search .input-group-append .input-group-text {
+  border-left: 0;
+}
+ .sidebar-search, .sidebar .sidebar-menu {
+  border-top: 1px solid #2b2b2b;
+}
+  .sidebar-search .input-group-text {
+  border-color: #2b2b2b;
+  box-shadow: none;
+}
+  .sidebar-search input.search-menu, .sidebar .sidebar-search .input-group-text {
+  background-color: #2b2b2b;
+  border: none;
+  margin-left: 1px;
+}
+ .sidebar-search, .sidebar.sidebar-bg .sidebar-menu {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+  .sidebar-search .input-group-text {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}

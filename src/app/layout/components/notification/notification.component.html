@@ -1,0 +1,30 @@
+<div class="sidebar-footer">
+  <ng-container *ngFor="let dropdownItem of dropdownItems">
+    <div class="dropdown" dropdown>
+      <a href="#" dropdownToggle>
+        <i class="{{ dropdownItem.icon }}"></i>
+        <span *ngIf="dropdownItem.badge" class="badge badge-pill badge-{{ dropdownItem.badgeColor }} notification">{{ dropdownItem.badge }}</span>
+      </a>
+      <div *ngIf="dropdownItem.title" class="dropdown-menu {{ dropdownItem.menuClass }}" dropdown>
+        <div *ngIf="dropdownItem.headerClass" class="{{ dropdownItem.headerClass }}">
+          <i class="{{ dropdownItem.icon }}"></i>
+          {{ dropdownItem.title }}
+        </div>
+        <div class="dropdown-divider"></div>
+        <a *ngFor="let item of dropdownItem.items" class="dropdown-item" href="#">
+          <div *ngIf="item.contentClass" class="{{ item.contentClass }}">
+            <div class="icon">
+              <i class="{{ item.icon }}"></i>
+            </div>
+            <div class="content">
+              <div class="notification-detail">{{ item.detail }}</div>
+              <div class="notification-time">{{ item.time }}</div>
+            </div>
+          </div>
+        </a>
+        <div *ngIf="dropdownItem.viewAllText" class="dropdown-divider"></div>
+        <a *ngIf="dropdownItem.viewAllText" class="dropdown-item text-center" href="#">{{ dropdownItem.viewAllText }}</a>
+      </div>
+    </div>
+  </ng-container>
+</div>
